@@ -1,17 +1,15 @@
 def main():
-
-    up, down, left, right = (int (x) for x in (0,0,0,0))
     
+    movimento_out = []
     while True:
-        movimento = input('Digite os movimentos cima, baixo, esquerda, direta (do robo), separdos por virgula').split(',')
-        if movimento == '':
+        movimento_in = input('Digite os movimentos cima, baixo, esquerda e direita, separadamente: ')
+        if movimento_in == '':
+            up, down, left, right = (int (x) for x in (movimento_out))
+            distancia = ((down - up)**2 + (left - right)**2 )/2
+            print(round(distancia))
             break
         else:
-            continue
-        def calc_dis(movimento):
-            distancia =
-            rounded = ((down - up)**2 + (left - right)**2 )**(1/2)
-            print(round(rounded))
+            movimento_out.append(movimento_in)
 
 if __name__ == '__main__':
     main()
