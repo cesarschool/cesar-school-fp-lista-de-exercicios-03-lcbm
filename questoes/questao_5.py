@@ -2,12 +2,10 @@ def main():
     
     while True:
         rot_in = input("Digite aqui a cifra rotacional ROT + <chave> + ' ' + mensagem: ").split(' ', 1)
-        cypher = rot_in[0][0:3]
         
-        if cypher != "ROT" or sum(map(str.isalpha, rot_in[0])) > 3:
+        if rot_in[0][0:3] != "ROT" or sum(map(str.isalpha, rot_in[0])) > 3:
             print("ERRO")
-            continue
-        
+            continue    
         else:
             rot_message = rot_in[1]
             rot_key = int(rot_in[0].split('ROT')[1])
