@@ -6,7 +6,7 @@ def main():
     for char in user_in:
         frequencies.append("{}:{}".format(char,user_in.count(char)))
 
-    print(sorted(frequencies))
+    print(sorted(set(frequencies)))
 
 if __name__ == '__main__':
     main()
